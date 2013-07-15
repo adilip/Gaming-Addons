@@ -1,0 +1,169 @@
+<Ui>
+
+	<Frame name="ConquestCalculator_MainFrame" parent="UIParent" enableMouse="true" movable="true" enableKeyboard="true">
+	
+		<Anchors>
+			<Anchor point="CENTER" />
+		</Anchors>
+	
+		<Size x="200" y="160" />
+		
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16" />
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16" />
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="4" right="3" top="4" bottom="3" />
+			</BackgroundInsets>
+			<Color r="0.2" g="0.2" b="0.2" a="0.7" />
+		</Backdrop>
+		
+		<Layers>
+			<Layer level="ARTWORK">
+			
+			<FontString name="$parent_TitleString" inherits="SystemFont_Small" text="Conquest Calculator" justifyV="TOP" justifyH="CENTER">
+				<Size x="190" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="5" y="-5" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_ConquestPrompt" inherits="SystemFont_Small" text="Conquest Amount:" justifyV="TOP" justifyH="RIGHT">
+				<Size x="120" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="5" y="-40" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_RBG" inherits="SystemFont_Small" text="RBG Wins:" justifyV="TOP" justifyH="RIGHT">
+				<Size x="120" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="5" y="-75" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_RBGWins" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="LEFT">
+				<Size x="60" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="130" y="-75" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_Arena" inherits="SystemFont_Small" text="Arena Wins:" justifyV="TOP" justifyH="RIGHT">
+				<Size x="120" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="5" y="-110" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_ArenaWins" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="LEFT">
+				<Size x="60" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="130" y="-110" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_BG" inherits="SystemFont_Small" text="BG Wins:" justifyV="TOP" justifyH="RIGHT">
+				<Size x="120" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="5" y="-145" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			<FontString name="$parent_BGWins" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="LEFT">
+				<Size x="60" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="130" y="-145" />
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="0" a="1" />
+			</FontString>
+			
+			</Layer>
+		
+		</Layers>
+		
+		<Frames>
+			<EditBox name="$parent_EditBox" letters="5" numeric="true">
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Left">
+							<Size x="50" y="30" />
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="-10" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.2" top="0" bottom="1.0" />
+						</Texture>
+						<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Right">
+							<Size x="50" y="30" />
+							<Anchors>
+								<Anchor point="TOPRIGHT">
+									<Offset x="-10" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.7" right="1.0" top="0" bottom="1.0" />
+						</Texture>
+					</Layer>
+				</Layers>
+				<Size x="60" y="30" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="135" y="-30" />
+					</Anchor>
+				</Anchors>
+				<FontString inherits="SystemFont_Small" justifyV="TOP" justifyH="LEFT">
+					<Color r="1" g="1" b="0" a="1" />
+				</FontString>
+				<Scripts>
+					<OnLoad>
+						ConquestCalculator_AutoFocus()
+					</OnLoad>
+					<OnEnterPressed>
+						ConquestCalculator_OnEnterPressed()
+					</OnEnterPressed>
+				</Scripts>
+			</EditBox>
+		</Frames>
+		
+		<Scripts>
+			<OnLoad>
+				ConquestCalculator_OnLoad()
+			</OnLoad>
+			<OnMouseDown>
+				ConquestCalculator_OnMouseDown()
+			</OnMouseDown>
+			<OnMouseUp>
+				ConquestCalculator_OnMouseUp()
+			</OnMouseUp>
+		</Scripts>
+	
+	</Frame>
+
+</Ui>

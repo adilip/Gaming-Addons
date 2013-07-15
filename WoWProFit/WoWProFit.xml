@@ -1,0 +1,149 @@
+<Ui>
+
+	<Frame name="WoWProFit_MainFrame" parent="UIParent" enableMouse="true" movable="true">
+		<Anchors>
+			<Anchor point="CENTER" />
+		</Anchors>
+		<Size>
+			<AbsDimension x="160" y="20" />			
+		</Size>
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16" />
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16" />
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="4" right="3" top="4" bottom="3" />
+			</BackgroundInsets>
+			<Color r="0.2" g="0.2" b="0.2" a="0.7" />
+		</Backdrop>
+		<Frames>
+			<Button name="$parent_Button">
+				<Size>
+					<AbsDimension x="15" y="15" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="3" y="-3" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\Minimap\TRACKING\OBJECTICONS">
+					<TexCoords left="0" right="0.125" top="0" bottom="0.5" />
+				</NormalTexture>
+				<HighlightTexture file="Interface\Minimap\TRACKING\OBJECTICONS">
+					<TexCoords left="0.125" right="0.25" top="0" bottom="0.5" />
+				</HighlightTexture>
+				<Scripts>
+					<OnClick>
+						WoWProFit_Button_OnClick()
+					</OnClick>
+				</Scripts>
+			</Button>
+		</Frames>
+		
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parent_GoldString" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="0" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+									<AbsDimension x="20" y="-5" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1" g="1" b="0" a="1" />
+				</FontString>
+				
+				<Texture name="$parent_GoldTex" file="Interface\MoneyFrame\UI-GoldIcon">
+					<Size>
+						<AbsDimension x="10" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_GoldString" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				
+				<FontString name="$parent_SilverString" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="0" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_GoldTex" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1" g="1" b="0" a="1" />
+				</FontString>
+				
+				<Texture name="$parent_SilverTex" file="Interface\MoneyFrame\UI-SilverIcon">
+					<Size>
+						<AbsDimension x="10" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_SilverString" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				
+				<FontString name="$parent_CopperString" inherits="SystemFont_Small" text="0" justifyV="TOP" justifyH="RIGHT">
+					<Size>
+						<AbsDimension x="0" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent_SilverTex" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1" g="1" b="0" a="1" />
+				</FontString>
+			
+				<Texture name="$parent_CopperTex" file="Interface\MoneyFrame\UI-CopperIcon">
+					<Size>
+						<AbsDimension x="10" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeto="$parent_CopperString" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="2" y="0" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>				
+			</Layer>
+		</Layers>
+		
+		<Scripts>
+			<OnLoad>
+				WoWProFit_OnLoad()
+			</OnLoad>
+			<OnEvent>
+				<!-- Note: (...) parameter in function indicates function has variable number of arguments, when called all its arguments are collected in a single table -->
+				WoWProFit_OnEvent(self, event, ...)
+			</OnEvent>
+			<OnMouseDown>
+				WoWProFit_OnMouseDown()
+			</OnMouseDown>
+			<OnMouseUp>
+				WoWProFit_OnMouseUp()
+			</OnMouseUp>
+		</Scripts>		
+	</Frame>
+</Ui>

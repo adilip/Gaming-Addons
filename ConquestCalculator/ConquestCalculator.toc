@@ -1,0 +1,7 @@
+## Interface: 50300
+## Title: ConquestCalculator
+## Notes: Calculates number of arena wins required for set Conquest Amount
+## Author: Arjun Dilip Kumar
+
+ConquestCalculator.lua
+ConquestCalculator.xml

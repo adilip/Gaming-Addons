@@ -1,0 +1,8 @@
+## Interface: 50300
+## Title: WoWProFit
+## Notes: My first AddOn! Calculates whether you make a profit or deficit.
+## Author: Arjun Dilip Kumar
+## SavedVariablesPerCharacter: WoWProFit_History
+
+WoWProFit.lua
+WoWProFit.xml
