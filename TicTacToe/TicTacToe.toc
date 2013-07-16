@@ -1,7 +1,7 @@
 ## Interface: 50300
 ## Title: TicTacToe
 ## Notes: Simple TicTacToe to play while slacking in game.
-## Author: LucyandMolly
+## Author: Arjun Dilip Kumar
 
 TicTacToe.lua
 TicTacToe.xml
