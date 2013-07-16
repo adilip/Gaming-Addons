@@ -1,89 +1,98 @@
 <Ui>
 
-<Frame name="ConquestCalculator_MainFrame" parent="UIParent" enableMouse="true" movable="true" enableKeyboard="true">
+	<Frame name="ConquestCalculator_MainFrame" parent="UIParent" enableMouse="true" movable="true" enableKeyboard="true">
 	
-	<Anchors>
-		<Anchor point="CENTER" />
-	</Anchors>
+		<Anchors>
+			<Anchor point="CENTER" />
+		</Anchors>
 	
-	<Size x="160" y="20" />
+		<Size x="160" y="20" />
 	
-	<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
 		
-		<EdgeSize>
-			<AbsValue val="16" />
-		</EdgeSize>		
-		<TileSize>
-			<AbsValue val="16" />
-		</TileSize>
-		<BackgroundInsets>
-			<AbsInset left="4" right="3" top="4" bottom="3" />
-		</BackgroundInsets>
-		<Color r="0.2" g="0.2" b="0.2" a="0.7" />
+			<EdgeSize>
+				<AbsValue val="16" />
+			</EdgeSize>		
+			<TileSize>
+				<AbsValue val="16" />
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="4" right="3" top="4" bottom="3" />
+			</BackgroundInsets>
+			<Color r="0.2" g="0.2" b="0.2" a="0.7" />
+		
 		</Backdrop>
 		
-	<Frames>
+		<Frames>
 			
-		<Button name="$parent_Button">
-			<Size>
-				<AbsDimension x="15" y="15" />
-			</Size>
-			<Anchors>
-				<Anchor point="TOPLEFT">
-					<Offset>
-						<AbsDimension x="3" y="-3" />
-					</Offset>
-				</Anchor>
-			</Anchors>
-			<NormalTexture file="Interface\Minimap\TRACKING\OBJECTICONS">
-				<TexCoords left="0" right="0.125" top="0" bottom="0.5" />
-			</NormalTexture>
-			<HighlightTexture file="Interface\Minimap\TRACKING\OBJECTICONS">
-				<TexCoords left="0.125" right="0.25" top="0" bottom="0.5" />
-			</HighlightTexture>
-			<Scripts>
-				<OnClick>
-					ConquestCalculator_Button_OnClick()
-				</OnClick>
-			</Scripts>
-		</Button>
 			
-		<EditBox name="$parent_EditBox" letters="5" numeric="true">
-			<Layers>
-				<Layer level="BACKGROUND">
-					<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Left">
-						<Size x="50" y="10" />
-						<Anchors>
-							<Anchor point="TOPLEFT">
-								<Offset x="0" y="0" />
-							</Anchor>
-						</Anchors>
-						<TexCoords left="0" right="0.2" top="0" bottom="1" />
-					</Texture>
-					<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Right">
-						<Size x="50" y="10" />
-						<Anchors>
-							<Anchor point="TOPRIGHT">
-								<Offset x="-10" y="0" />
-							</Anchor>
-						</Anchors>
-					</Texture>
-				</Layer>
-			</Layers>
+			
+			<EditBox name="$parent_EditBox" letters="5" numeric="true">
+			
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Left">
+							<Size x="50" y="10" />
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="0" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.2" top="0" bottom="1" />
+						</Texture>
+						<Texture file="Interface\ChatFrame\UI-ChatInputBorder-Right">
+							<Size x="50" y="10" />
+							<Anchors>
+								<Anchor point="TOPRIGHT">
+									<Offset x="-10" y="0" />
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.7" right="1" top="0" bottom="1" />
+						</Texture>
+					</Layer>
+				</Layers>
+			
+				<Size x="60" y="10" />
+			
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="20" y="-5" />
+					</Anchor>
+				</Anchors>
+			
+				<FontString inherits="SystemFont_Small" justifyV="TOP" justifyH="LEFT">
+					<Color r="1" g="1" b="0" a="1" />
+				</FontString>
+			
+				<Scripts>
+					<OnLoad>
+						ConquestCalculator_AutoFocus()
+					</OnLoad>
+					<OnEnterPressed>
+						ConquestCalculator_OnEnterPressed()
+					</OnEnterPressed>
+				</Scripts>		
 		
+			</EditBox>
+		</Frames>	
 		
-		</EditBox>	
+		<Scripts>
+			<OnLoad>
+				ConquestCalculator_OnLoad()
+			</OnLoad>
+			<OnMouseDown>
+				ConquestCalculator_OnMouseDown()
+			</OnMouseDown>
+			<OnMouseUp>
+				ConquestCalculator_OnMouseUp()
+			</OnMouseUp>
+		</Scripts>	
+	
 		
-		
-	
-	
-	</Backdrop>
-	
-	
 
 
 
-</Frame>
+	</Frame>
 
 
 
