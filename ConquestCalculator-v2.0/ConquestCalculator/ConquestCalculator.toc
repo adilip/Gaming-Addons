@@ -1,0 +1,7 @@
+## Interface: 50300
+## Title: ConquestCalculator
+## Notes: Calculates number of rbg/bg/arena wins required for selected number of conquest points.
+## Author: Arjun Dilip Kumar
+
+ConquestCalculator.lua
+ConquestCalculator.xml
