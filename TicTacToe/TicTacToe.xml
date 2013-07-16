@@ -1,0 +1,176 @@
+<Ui>
+
+	<Frame name="TicTacToe_MainFrame" parent="UIParent" enableMouse="true" movable="true">
+	
+		<Anchors>
+			<Anchor point="CENTER" />
+		</Anchors>
+		
+		<Size x="60" y="60" />
+		
+		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16" />
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="16" />
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="4" right="3" top="4" bottom="3" />
+			</BackgroundInsets>
+			<Color r="0.2" g="0.2" b="0.2" a="0.7" />		
+		</Backdrop>
+		
+		<Frames>
+		
+			<Button name="$parent_Button_A">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="6" y="-6" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_A_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_B">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="23" y="-6" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_B_OnClick()
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parent_Button_C">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="40" y="-6" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_C_OnClick()
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parent_Button_D">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="6" y="-23" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_D_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_E">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="23" y="-23" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_E_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_F">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="40" y="-23" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_F_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_G">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="6" y="-40" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_G_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_H">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="23" y="-40" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_H_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			<Button name="$parent_Button_I">
+				<Size x="15" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset x="40" y="-40" />
+					</Anchor>
+				</Anchors>
+				<NormalTexture r="0.2" g="0.2" b="0.2" a="1" />
+				<Scripts>
+					<OnClick>
+						Button_I_OnClick()
+					</OnClick>
+				</Scripts>				
+			</Button>
+			
+			
+		
+		</Frames>
+		
+		<Scripts>
+			<OnMouseDown>
+				TicTacToe_OnMouseDown()
+			</OnMouseDown>
+			<OnMouseUp>
+				TicTacToe_OnMouseUp()
+			</OnMouseUp>
+		</Scripts>
+	
+	</Frame>
+
+</Ui>
