@@ -1,0 +1,7 @@
+## Interface: 50300
+## Title: ConquestCapCalculator
+## Notes: Calculates your Conquest Points cap from arena and battleground ratings.
+## Author: Sparkely1993
+
+ConquestCapCalculator.lua
+ConquestCapCalculator.xml
